@@ -19,7 +19,7 @@
 }
 .main-header {
   /* position: absolute; */
-  height: 6 0px;
+  height: 60px;
   top: 0;
   width: 100%;
   /* z-index: 1000; */
@@ -28,19 +28,19 @@
   /* background: transparent; */
 }
 .main-header .header-wrapper {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   width: 70%;
   margin: 0 auto;
   padding-top: 1em;
 }
 .main-header .header-wrapper .main-logo {
-  float: left;
+  text-align: start;
   font-weight: 700;
   font-size: 1.875em;
 }
 .main-header .header-wrapper .main-menu {
-  float: right;
-  text-align: center;
+  text-align: end;
 }
 .main-header .header-wrapper .main-menu li {
   display: inline-block;
