@@ -18,11 +18,8 @@
   background: #f38181;
 }
 .main-header {
-  /* position: absolute; */
-  /* height: 60px; */
   top: 0;
   width: 100%;
-  /* z-index: 1000; */
   font-family: Montserrat, sans-serif;
   color: rgb(27, 12, 12);
   background-color: #005a8d;
@@ -30,11 +27,13 @@
 .main-header .header-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  /* width: 70%; */
   margin: 0 auto;
   padding-top: 1em;
 }
-.main-header .header-wrapper .main-logo {
+/* .main-header .header-wrapper  */
+
+.main-logo {
   text-align: start;
   font-weight: 700;
   font-size: 1.875em;
@@ -66,6 +65,7 @@
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   font-size: 0.875em;
+  text-decoration: none;
 }
 .main-header .header-wrapper .main-menu li a:hover {
   color: #524c38;
@@ -75,10 +75,18 @@
 .main-header .header-wrapper .main-menu li a span {
   font-size: 1.2em;
 }
-.main-header .header-wrapper .main-menu li:last-child {
+/* .main-header .header-wrapper .main-menu li:last-child {
   padding: 0.75em 0;
-}
-.main-header .header-wrapper .main-menu li:nth-child(6) a:hover,
+} */
+/* .main-header .header-wrapper .main-menu li:nth-child(6) a:hover,
 .main-header .header-wrapper .main-menu li:last-child a:hover {
   border: none;
+} */
+
+@media (max-width: 767px) {
+  .header-wrapper nav .main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

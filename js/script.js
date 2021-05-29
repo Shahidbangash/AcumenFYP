@@ -1,6 +1,7 @@
 var video;
 $(document).ready(function () {
   $(".main-header").load("./header.html");
+  $("footer").load("./footer.html");
 });
 
 $(window).scroll(function () {
@@ -12,29 +13,36 @@ $(window).scroll(function () {
   }
 });
 
-function uploadVideo() {}
+document.getElementById("input").addEventListener("change", function () {
+  var media = URL.createObjectURL(this.files[0]);
+  document.getElementById("localVideoResult").style.display = "flex";
+  var video = document.getElementById("localVideo");
+  video.src = media;
+  video.style.display = "block";
+  video.play();
 
-function displayYouTubeVideo() {
-  // load all modals
+  video.addEventListener("play", () => {
+    const canvas = faceapi.createCanvasFromMedia(video);
+    // document.body.append(canvas);
+    document.getElementById("localVideoResult").style.display = "flex";
+    document.getElementById("localVideoResult").appendChild(canvas);
+    const displaySize = { width: 720, height: 520 };
+    faceapi.matchDimensions(canvas, displaySize);
 
-  // a little oveview about MTCNN
-
-  // MTCNN (Multi-task Cascaded Convolutional Neural Networks) is an algorithm consisting of 3 stages,
-  // which detects the bounding boxes of faces in an image along with their 5 Point Face Landmarks(link to the paper).
-  // Each stage gradually improves the detection results by passing it’s inputs through a CNN,
-  // which returns candidate bounding boxes with their scores, followed by non max suppression.
-
-  Promise.all(
-    faceapi.loadMtcnnModel("/"),
-    faceapi.loadFaceRecognitionModel("/")
-  ).then(
-    navigator.getUserMedia(
-      { video: {} },
-      (stream) => (video.srcObject = stream),
-      (err) => console.error(err)
-    )
-  );
-}
+    setInterval(async () => {
+      const detections = await faceapi
+        .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
+        .withFaceLandmarks()
+        .withFaceExpressions();
+      const resizedDetections = faceapi.resizeResults(detections, displaySize);
+      canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+      faceapi.draw.drawDetections(canvas, resizedDetections);
+      faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
+      faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
+      // console.log(resizedDetections[0].expressions);
+    }, 100);
+  });
+});
 
 function getResult() {
   $(".pre-loader").append(
@@ -59,10 +67,12 @@ function getResult() {
     ),
   ]).then(startVideo);
 }
+
 function startVideo() {
   $("#video-result").empty();
   $("#video-result").append(`<video id="video" autoplay muted sr></video>`);
   video = document.getElementById("video");
+  document.getElementById("video-result").style.display = "flex";
 
   video.addEventListener("play", () => {
     const canvas = faceapi.createCanvasFromMedia(video);
@@ -83,6 +93,7 @@ function startVideo() {
       faceapi.draw.drawDetections(canvas, resizedDetections);
       faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
       faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
+      // console.log(resizedDetections[0].expressions);
     }, 100);
   });
   // document.querySelector("#loader").classList.add("hide-loader");
