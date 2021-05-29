@@ -19,13 +19,13 @@
 }
 .main-header {
   /* position: absolute; */
-  height: 60px;
+  /* height: 60px; */
   top: 0;
   width: 100%;
   /* z-index: 1000; */
   font-family: Montserrat, sans-serif;
   color: rgb(27, 12, 12);
-  /* background: transparent; */
+  background-color: #005a8d;
 }
 .main-header .header-wrapper {
   display: flex;
@@ -46,10 +46,25 @@
   display: inline-block;
   padding: 0.75em 1.875em;
 }
+
+.main-header .header-wrapper .main-menu li .btn-outline-primary {
+  border-color: #fff;
+  color: #fff5fd;
+}
+
+.main-header .header-wrapper .main-menu li .btn-outline-primary:hover {
+  background-color: #fff5fd;
+  color: #022e57;
+}
+
+.main-header .header-wrapper .main-menu li .login-button {
+  background-color: #0a1931;
+  border-color: #242424;
+}
 .main-header .header-wrapper .main-menu li a {
   padding-bottom: 0.75em;
   text-transform: uppercase;
-  color: rgb(53, 43, 43);
+  color: rgb(255, 255, 255);
   font-size: 0.875em;
 }
 .main-header .header-wrapper .main-menu li a:hover {

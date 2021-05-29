@@ -38,7 +38,9 @@ function displayYouTubeVideo() {
 
 function getResult() {
   $(".pre-loader").append(
-    "<div><h2>We are loading Modal </h2><div class='loader ' id='loader'></div></div> "
+    `<div><h2>We are loading Modal. Result will be shown shortly </h2>
+          <div class='loader text-center' id='loader'></div>
+    </div> `
   );
 
   Promise.all([

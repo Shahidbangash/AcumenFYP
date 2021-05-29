@@ -48,6 +48,7 @@ canvas {
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
+  margin: 0 auto;
 }
 
 @keyframes spin {
@@ -61,4 +62,20 @@ canvas {
 
 .hide-loader {
   display: none;
+}
+
+@media (max-width: 991.98px) {
+  #video-result #video {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-header .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1em;
+  }
 }
