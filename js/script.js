@@ -53,18 +53,10 @@ function getResult() {
 
   Promise.all([
     // To load all the models
-    faceapi.nets.tinyFaceDetector.loadFromUri(
-      "/face-expression-detector/models"
-    ),
-    faceapi.nets.faceLandmark68Net.loadFromUri(
-      "/face-expression-detector/models"
-    ),
-    faceapi.nets.faceRecognitionNet.loadFromUri(
-      "/face-expression-detector/models"
-    ),
-    faceapi.nets.faceExpressionNet.loadFromUri(
-      "/face-expression-detector/models"
-    ),
+    faceapi.nets.tinyFaceDetector.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceLandmark68Net.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceRecognitionNet.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceExpressionNet.loadFromUri("/AcumenFYP/models"),
   ]).then(startVideo);
 }
 
