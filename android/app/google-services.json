@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "917082302540",
+    "project_id": "acumen2-e686f",
+    "storage_bucket": "acumen2-e686f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917082302540:android:2deaccc7f089533bd6ece9",
+        "android_client_info": {
+          "package_name": "com.example.acc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917082302540-l2cqa4unhsvo82q5eg2qfj3npe485sb8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCac58ctOnbjfQm0N9Of82rs89dpLSmWIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917082302540-l2cqa4unhsvo82q5eg2qfj3npe485sb8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
