@@ -61,12 +61,11 @@ canvas {
 }
 
 @media (max-width: 991.98px) {
-  #video-result #video {
-    width: 80%;
-  }
-
+  #video-result #video,
   #video-result canvas {
     width: 80%;
+    height: 200px;
+    border: none;
   }
 }
 
