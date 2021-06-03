@@ -44,19 +44,25 @@ document.getElementById("input").addEventListener("change", function () {
   });
 });
 
-function getResult() {
+async function getResult() {
+  // $
+  $(".pre-loader").empty();
   $(".pre-loader").append(
     `<div><h2>We are loading Modal. Result will be shown shortly </h2>
           <div class='loader text-center' id='loader'></div>
     </div> `
   );
 
-  Promise.all([
+  await Promise.all([
     // To load all the models
-    faceapi.nets.tinyFaceDetector.loadFromUri("/AcumenFYP/models"),
-    faceapi.nets.faceLandmark68Net.loadFromUri("/AcumenFYP/models"),
-    faceapi.nets.faceRecognitionNet.loadFromUri("/AcumenFYP/models"),
-    faceapi.nets.faceExpressionNet.loadFromUri("/AcumenFYP/models"),
+    // faceapi.nets.tinyFaceDetector.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
+    // faceapi.nets.faceLandmark68Net.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
+    // faceapi.nets.faceRecognitionNet.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
+    // faceapi.nets.faceExpressionNet.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceExpressionNet.loadFromUri("/models"),
   ]).then(startVideo);
 }
 
@@ -78,20 +84,43 @@ function startVideo() {
     setInterval(async () => {
       const detections = await faceapi
         .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
-        .withFaceLandmarks()
+        .withFaceLandmarks() // show face landmarks such as nose position ,
         .withFaceExpressions();
       const resizedDetections = faceapi.resizeResults(detections, displaySize);
       canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
       faceapi.draw.drawDetections(canvas, resizedDetections);
       faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
       faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
-      // console.log(resizedDetections[0].expressions);
+      console.log(resizedDetections[0].expressions);
     }, 100);
   });
-  // document.querySelector("#loader").classList.add("hide-loader");
-  navigator.getUserMedia(
-    { video: {} },
-    (stream) => (video.srcObject = stream),
-    (err) => console.error(err)
-  );
+  document.querySelector("#loader").classList.add("hide-loader");
+
+  // const browserSupportsMedia = () => {
+  navigator.getUserMedia =
+    navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia;
+
+  if (navigator.getUserMedia) {
+    navigator.getUserMedia(
+      { audio: true, video: { width: 1280, height: 720 } },
+      function (stream) {
+        var video = document.querySelector("video");
+        video.srcObject = stream;
+        video.onloadedmetadata = function (e) {
+          video.play();
+        };
+      },
+      function (err) {
+        console.log("The following error occurred: " + err.name);
+      }
+    );
+  } else {
+    console.log("getUserMedia not supported");
+    alert("Sorry your browser does not support Video");
+  }
+
 }
+
+// Get Result Using Video file
