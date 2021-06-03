@@ -82,8 +82,11 @@ async function getResult() {
 }
 
 function startVideo() {
+  removeLiveVideoCanvas();
+  removeLocalVideoCanvas();
   // we have to remove existing data if it exist
-  $("#video-result").empty();
+  // $("#video-result").empty();
+
   // add video player
   $("#video-result").append(`<video id="video" autoplay muted sr></video>`);
   video = document.getElementById("video");
