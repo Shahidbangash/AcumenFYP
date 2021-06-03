@@ -13,34 +13,49 @@ $(window).scroll(function () {
   }
 });
 
-document.getElementById("input").addEventListener("change", function () {
+document.getElementById("input").addEventListener("change", async function () {
   var media = URL.createObjectURL(this.files[0]);
   document.getElementById("localVideoResult").style.display = "flex";
   var video = document.getElementById("localVideo");
   video.src = media;
   video.style.display = "block";
-  video.play();
+  await Promise.all([
+    // To load all the models
+    // faceapi.nets.tinyFaceDetector.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
+    // faceapi.nets.faceLandmark68Net.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
+    // faceapi.nets.faceRecognitionNet.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
+    // faceapi.nets.faceExpressionNet.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceExpressionNet.loadFromUri("/models"),
+  ]).then(() => {
+    video.play();
 
-  video.addEventListener("play", () => {
-    const canvas = faceapi.createCanvasFromMedia(video);
-    // document.body.append(canvas);
-    document.getElementById("localVideoResult").style.display = "flex";
-    document.getElementById("localVideoResult").appendChild(canvas);
-    const displaySize = { width: 720, height: 520 };
-    faceapi.matchDimensions(canvas, displaySize);
+    video.addEventListener("play", () => {
+      const canvas = faceapi.createCanvasFromMedia(video);
+      // document.body.append(canvas);
+      document.getElementById("localVideoResult").style.display = "flex";
+      document.getElementById("localVideoResult").appendChild(canvas);
+      const displaySize = { width: 720, height: 520 };
+      faceapi.matchDimensions(canvas, displaySize);
 
-    setInterval(async () => {
-      const detections = await faceapi
-        .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
-        .withFaceLandmarks()
-        .withFaceExpressions();
-      const resizedDetections = faceapi.resizeResults(detections, displaySize);
-      canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
-      faceapi.draw.drawDetections(canvas, resizedDetections);
-      faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
-      faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
-      // console.log(resizedDetections[0].expressions);
-    }, 100);
+      setInterval(async () => {
+        const detections = await faceapi
+          .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
+          .withFaceLandmarks()
+          .withFaceExpressions();
+        const resizedDetections = faceapi.resizeResults(
+          detections,
+          displaySize
+        );
+        canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+        faceapi.draw.drawDetections(canvas, resizedDetections);
+        faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
+        faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
+        // console.log(resizedDetections[0].expressions);
+      }, 100);
+    });
   });
 });
 
@@ -67,7 +82,9 @@ async function getResult() {
 }
 
 function startVideo() {
+  // we have to remove existing data if it exist
   $("#video-result").empty();
+  // add video player
   $("#video-result").append(`<video id="video" autoplay muted sr></video>`);
   video = document.getElementById("video");
   document.getElementById("video-result").style.display = "flex";
@@ -91,12 +108,11 @@ function startVideo() {
       faceapi.draw.drawDetections(canvas, resizedDetections);
       faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
       faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
-      console.log(resizedDetections[0].expressions);
+      // console.log(resizedDetections[0].expressions);
     }, 100);
   });
   document.querySelector("#loader").classList.add("hide-loader");
 
-  // const browserSupportsMedia = () => {
   navigator.getUserMedia =
     navigator.getUserMedia ||
     navigator.webkitGetUserMedia ||
@@ -120,7 +136,6 @@ function startVideo() {
     console.log("getUserMedia not supported");
     alert("Sorry your browser does not support Video");
   }
-
 }
 
 // Get Result Using Video file
