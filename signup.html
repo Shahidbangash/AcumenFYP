@@ -9,9 +9,9 @@
             rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <title>Login</title>
+        <title>Signup</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+      
     </head>
 
     <body>
@@ -52,28 +52,28 @@
         </div>
 
         <section class="container">
-            <section class="wrapper" id="login-section">
+          
+            <section class="wrapper " id="signup-section">
                 <header>
                     <h1>Welcome back!</h1>
-                    <p>User Login</p>
+                    <p>User Sign up</p>
                 </header>
-                <section class="main-content" id="login-section">
-                    <form id="login_form" onsubmit="event.preventDefault(); login();">
+                <section class="main-content">
+                    <form id="signup_form" onsubmit="event.preventDefault(); signup();">
                         <input required autocomplete="email" type="email" name="email" placeholder="Email">
-                        <div class="line"></div>
+                        <input type="text" autocomplete="username" name="first_name" required placeholder="UserName">
                         <input autocomplete="current-password" type="password" name="password" placeholder="Password">
+                        <button type="submit" class="btn btn-primary w-100">Signup</button>
                         <!-- <div class="line"></div> -->
-                        <button type="submit" class="btn btn-primary w-100">Login</button>
-                        <p class="text-danger" id="login_response"></p>
                     </form>
                 </section>
                 <footer>
-                    <p><span href="" title="Forgot Password">Forgot Password?</span></p>
-                    <p><span onclick="location.href ='signup.html';" title="Register">Register</span>
+                    <p><a title="Forgot Password">Forgot Password?</a></p>
+                    <p><span onclick="location.href ='login.html';" title="Register">Sign
+                            In</span>
                     </p>
                 </footer>
             </section>
-          
         </section>
 
 
@@ -82,7 +82,7 @@
         </div>
 
 
-
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
@@ -100,8 +100,7 @@
 
             document.addEventListener('DOMContentLoaded', function () {
                 try {
-
-
+              
                     const firebaseConfig = {
                         apiKey: "AIzaSyAo0sKakqaRMOGRqY2DsQWH8kX4r44Izjs",
                         authDomain: "acumen-9752f.firebaseapp.com",
@@ -128,7 +127,7 @@
                         'remoteConfig',
                         'performance',
                     ].filter(feature => typeof app[feature] === 'function');
-                    //loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+                     //loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
                 } catch (e) {
                     console.error(e);
                 }
@@ -137,7 +136,7 @@
 
         <script src="js/authentication.js"></script>
         <!-- //<script src="./js/script.js"></script> -->
-
+        
     </body>
 
 </html>

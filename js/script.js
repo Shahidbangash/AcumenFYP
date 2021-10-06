@@ -2,6 +2,7 @@ var video;
 $(document).ready(function () {
   $(".main-header").load("./header.html");
   $("footer").load("./footer.html");
+  // loadModels();
 });
 
 $(window).scroll(function () {
@@ -12,6 +13,18 @@ $(window).scroll(function () {
     $("#main-navbar").removeClass("navbar-scroll");
   }
 });
+
+async function loadModels() {
+  await Promise.all([
+    faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
+    // faceapi.nets.faceLandmark68Net.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
+    // faceapi.nets.faceRecognitionNet.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
+    // faceapi.nets.faceExpressionNet.loadFromUri("/AcumenFYP/models"),
+    faceapi.nets.faceExpressionNet.loadFromUri("/models"),
+  ]);
+}
 
 document.getElementById("input").addEventListener("change", async function () {
   var media = URL.createObjectURL(this.files[0]);
