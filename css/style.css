@@ -5,8 +5,9 @@ body {
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #777777;
-  background: url(../img/body-bg.png) no-repeat center;
+  /* color: #777777; */
+  /* background: url(../img/body-bg.png) no-repeat center; */
+  background-color: #ddd !important;
 }
 
 h1,
@@ -413,3 +414,86 @@ input:focus {
 }
 
 /* Login form ends here */
+
+/* User type card starts here */
+
+.user-types {
+  padding: 80px 0;
+}
+.user-types .user-content {
+  padding: 80px 40px;
+  background-color: #ddd;
+}
+
+.user-content h2 {
+  position: relative;
+  font-size: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+.user-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  border-radius: 20px;
+  width: 70px;
+  background-color: rgb(117, 0, 133);
+}
+.user-content .user-type-inner {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 50px 25px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+.user-content .user-type-inner:hover {
+  background-color: #334756;
+  color: #fff !important;
+}
+.card-inner-text{}
+
+/* .... */
+
+.user-content .user-image {
+  margin-bottom: 20px;
+}
+.arrow-btn {
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-btn a:first-child {
+  font-size: 25px;
+}
+.arrow-btn a:last-child {
+  font-size: 25px;
+  background-color: purple;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.arrow-btn a i {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.icon-style{
+  font-size: 52px;
+  /* color: #334756; */
+}
+
+.icon-style:hover{
+  /* color: #ddd; */
+
+}
+
+/* User type card ends here */

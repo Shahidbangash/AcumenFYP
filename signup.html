@@ -11,11 +11,15 @@
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <title>Signup</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      
+        <script defer type="text/javascript" src="js/script.js"></script>
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/header.css">
+
     </head>
 
     <body>
-
+        <header class="main-header"></header>
+<!-- 
         <div class="svg-top">
             <?xml version="1.0" encoding="utf-8"?>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -32,7 +36,7 @@
                     <use xlink:href="#path-1" fill="url(#linearGradient-2)" fill-opacity="1" />
                 </g>
             </svg>
-        </div>
+        </div> -->
         <div class="svg-bottom">
             <?xml version="1.0" encoding="utf-8"?>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -52,27 +56,27 @@
         </div>
 
         <section class="container">
-          
+
             <section class="wrapper " id="signup-section">
-                <header>
-                    <h1>Welcome back!</h1>
+                <div>
+                    <h1>Welcome to Acumen!</h1>
                     <p>User Sign up</p>
-                </header>
+                </div>
                 <section class="main-content">
                     <form id="signup_form" onsubmit="event.preventDefault(); signup();">
                         <input required autocomplete="email" type="email" name="email" placeholder="Email">
                         <input type="text" autocomplete="username" name="first_name" required placeholder="UserName">
                         <input autocomplete="current-password" type="password" name="password" placeholder="Password">
-                        <button type="submit" class="btn btn-primary w-100">Signup</button>
+                        <button type="submit" class="btn custom-button w-100">Signup</button>
                         <!-- <div class="line"></div> -->
                     </form>
                 </section>
-                <footer>
+                <div class="login-footer">
                     <p><a title="Forgot Password">Forgot Password?</a></p>
                     <p><span onclick="location.href ='login.html';" title="Register">Sign
                             In</span>
                     </p>
-                </footer>
+                </div>
             </section>
         </section>
 
@@ -82,7 +86,7 @@
         </div>
 
 
-        
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
@@ -100,7 +104,7 @@
 
             document.addEventListener('DOMContentLoaded', function () {
                 try {
-              
+
                     const firebaseConfig = {
                         apiKey: "AIzaSyAo0sKakqaRMOGRqY2DsQWH8kX4r44Izjs",
                         authDomain: "acumen-9752f.firebaseapp.com",
@@ -127,7 +131,7 @@
                         'remoteConfig',
                         'performance',
                     ].filter(feature => typeof app[feature] === 'function');
-                     //loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+                    //loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
                 } catch (e) {
                     console.error(e);
                 }
@@ -136,7 +140,7 @@
 
         <script src="js/authentication.js"></script>
         <!-- //<script src="./js/script.js"></script> -->
-        
+
     </body>
 
 </html>

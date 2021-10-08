@@ -24,158 +24,53 @@
 		<link rel="stylesheet" href="./css/footer.css">
 
 	</head>
-
-
 	<body>
-
 		<header class="main-header">
-
 		</header>
 
-		<div class="container content">
+	
 
-			<div class=" text-center button-row">
-				<button type="button" class="btn btn-outline-primary  p-2" onclick="getResult()"> Detect
-					Live Camera expressions</button>
+		<section class="user-types">
 
-				<div class="btn btn-outline-primary p-1 button-width">
-					<!-- <label for="input">Local Video:</label> -->
-					<input class="" type="file" id="input" name="input_video" accept="video/mp4, video/mov">
-				</div>
+			<div class="container">
+				<div class="user-content">
+					<h2>Get your Expression done in one Click</h2>
 
-			</div>
-
-			<div class="pre-loader d-flex justify-content-center"></div>
-
-
-			<div id="video-result" class="text-center" style="display: none;">
-
-				<video id="video" autoplay muted sr></video>
-
-			</div>
-			<div id="localVideoResult" class="text-center" style="display: none;">
-				<video controls src="" id="localVideo" style="display: none;"></video>
-
-			</div>
-			<!-- Login Modal starts here -->
-
-			<div id="loginModal" class="modal">
-				<div class="container-login100 modal-dialog">
-					<div class="wrap-login100 modal-content">
-						<form action="" class="login100-form validate-form">
-							<a href="#"><span class="login100-form-title ">
-									Login Form
-								</span>
-							</a>
-							<div class="wrap-input100 validate-input mb-2 mt-2" data-validate="Valid email is: a@b.c">
-								<input type="text" class="input100" placeholder="Email">
-								<!-- <span class="focus-input100" data-placeholder="Email"></span> -->
-							</div>
-
-							<div class="wrap-input100 validate-input mb-2 mt-2" data-validate="Enter password">
-								<span class="btn-show-pass">
-									<i class="zmdi zmdi-eye"></i>
-								</span>
-								<input class="input100" placeholder="Password">
-								<!-- <span class="focus-input100" data-placeholder="Password"></span> -->
-							</div>
-
-							<div class="text-right p-t-8 p-b-31">
-								<a href="#">
-									Forget Password
-								</a>
-							</div>
-							<div class="container-login100-form-btn">
-								<div class="wrap-login100-form-btn">
-									<div class="login100-form-bgbtn text-center ">
-
-										<button class="btn ">
-											Login
-										</button>
-									</div>
+					<div class="row">
+						<div class="col-4" onclick="onclick=location.href = './cameraResult.html';">
+							<div class="user-type-inner">
+								<div class="user-image">
+									<i class="fa fa-camera icon-style " aria-hidden="true"></i>
+									<!-- <img src="images/user-type1.JPG" alt=""> -->
 								</div>
+								<h4 class="card-inner-text"> Use WebCam</h4>
 							</div>
-							<div class="text-center mt-2 mb-2">
-								<span class="">
-									Dont Have Account ?
-								</span>
-
-								<a class="" href="#">
-									Register Now
-								</a>
+						</div>
+						<div class="col-4" onclick="location.href = './videoResult.html'">
+							<div class="user-type-inner">
+								<div class="user-image">
+									<i class="fa fa-video-camera icon-style " style="font-size: 50px;"  aria-hidden="true"></i>
+									<!-- <img src="images/user-type1.JPG" alt=""> -->
+								</div>
+								<h4>Use Local Video</h4>
 							</div>
-
-						</form>
+						</div>
+						<!-- <div class="col-4">
+							<div class="user-type-inner">
+								<div class="user-image">
+									<img src="images/user-type1.JPG" alt="">
+								</div>
+								<h4>UX DESIGNER</h4>
+							</div>
+						</div> -->
+					</div>
+					<div class="d-flex arrow-btn">
+						<a href="" class="btn btn-danger mx-3">Back</a>
+						<a href=""><i class="fa fa-arrow-right"></i></a>
 					</div>
 				</div>
 			</div>
-			<!-- Login Modal ends here -->
-
-			<!-- Sign up modal starts here -->
-
-			<div id="signupModal" class="modal">
-				<div class="container-login100 modal-dialog">
-					<div class="wrap-login100 modal-content">
-						<form action="" class="login100-form validate-form">
-							<a href="#"><span class="login100-form-title ">
-									Signup Form
-								</span>
-							</a>
-							<div class="wrap-input100 validate-input mb-2 mt-2" data-validate="Valid email is: a@b.c">
-								<input type="text" class="input100" placeholder="First Name">
-								<!-- <span class="focus-input100" data-placeholder="Email"></span> -->
-							</div>
-
-							<div class="wrap-input100 validate-input mb-2 mt-2" data-validate="Valid email is: a@b.c">
-								<input type="text" class="input100" placeholder="Last Name">
-								<!-- <span class="focus-input100" data-placeholder="Email"></span> -->
-							</div>
-
-
-							<div class="wrap-input100 validate-input mb-2 mt-2" data-validate="Valid email is: a@b.c">
-								<input type="text" class="input100" placeholder="Email">
-								<!-- <span class="focus-input100" data-placeholder="Email"></span> -->
-							</div>
-
-							<div class="wrap-input100 validate-input mb-2 mt-2" data-validate="Enter password">
-								<span class="btn-show-pass">
-									<i class="zmdi zmdi-eye"></i>
-								</span>
-								<input class="input100" placeholder="Password">
-								<!-- <span class="focus-input100" data-placeholder="Password"></span> -->
-							</div>
-
-
-							<div class="container-login100-form-btn">
-								<div class="wrap-login100-form-btn">
-									<div class="login100-form-bgbtn text-center ">
-
-										<button class="btn ">
-											Sign up
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="text-center mt-2 mb-2">
-								<span class="">
-									Already Have Account ?
-								</span>
-
-								<a class="" href="#">
-									Login Now
-								</a>
-							</div>
-
-						</form>
-					</div>
-				</div>
-			</div>
-
-			<!-- Sign up modal ends here -->
-
-
-
-		</div>
+		</section>
 
 
 
@@ -197,7 +92,7 @@
 
 			document.addEventListener('DOMContentLoaded', function () {
 				try {
-				
+
 					const firebaseConfig = {
 						apiKey: "AIzaSyC1GkiWGio-_MohFCjXEZxr2akg286nKWA",
 						authDomain: "acumenfyp.firebaseapp.com",
@@ -206,7 +101,7 @@
 						messagingSenderId: "982412180494",
 						appId: "1:982412180494:web:eca5e3ea3ef3819abad05f",
 						measurementId: "G-25G6CNZT8L"
-					  };
+					};
 
 					// Initialize Firebase
 					const app = firebase.initializeApp(firebaseConfig);
