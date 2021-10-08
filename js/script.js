@@ -31,7 +31,7 @@ async function getResult() {
   // $
   $(".pre-loader").empty();
   $(".pre-loader").append(
-    `<div><h2>We are loading Modal. Result will be shown shortly </h2>
+    `<div><h2>We are initiating Models. Result will be appeared shortly</h2>
           <div class='loader text-center' id='loader'></div>
     </div> `
   );
@@ -53,6 +53,11 @@ async function getResult() {
 function startVideo() {
   removeLiveVideoCanvas();
   removeLocalVideoCanvas();
+  $('.pre-loader').empty();
+  // $(".pre-loader").append(
+  //   `<div><h2>Here is the result</h2>
+  //         <div class='loader text-center' id='loader'></div>
+  //   </div> `);
   // we have to remove existing data if it exist
   // $("#video-result").empty();
 

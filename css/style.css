@@ -431,7 +431,7 @@ input:focus {
   padding-bottom: 20px;
   margin-bottom: 40px;
 }
-.user-content h2::after {
+/* .user-content h2::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -440,7 +440,7 @@ input:focus {
   border-radius: 20px;
   width: 70px;
   background-color: rgb(117, 0, 133);
-}
+} */
 .user-content .user-type-inner {
   background-color: #fff;
   border-radius: 16px;
