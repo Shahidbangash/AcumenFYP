@@ -6,8 +6,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   /* color: #777777; */
-  /* background: url(../img/body-bg.png) no-repeat center; */
-  background-color: #ddd !important;
+  background: url(../img/images.jpg) no-repeat center; 
+  
+  /* background-color: #ddd !important; */
 }
 
 h1,
@@ -264,7 +265,7 @@ input:focus {
 }
 
 .btn-show-pass:hover {
-  color: #6a7dfe;
+  color: #aeb8f8;
   color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   color: -o-linear-gradient(left, #21d4fd, #b721ff);
   color: -moz-linear-gradient(left, #21d4fd, #b721ff);
@@ -387,7 +388,7 @@ input:focus {
   content: "\f06a";
   font-family: FontAwesome;
   font-size: 16px;
-  color: #c80000;
+  color: #f3f3f3;
 
   display: block;
   position: absolute;
@@ -418,18 +419,37 @@ input:focus {
 /* User type card starts here */
 
 .user-types {
-  padding: 80px 0;
+  align-content:center;
+  align-self: center;
+  background-image: url("img\favicon.png");
 }
+
 .user-types .user-content {
-  padding: 80px 40px;
-  background-color: #ddd;
+align-self:center;
+  padding: 90px 40px;
+  
+}
+
+.user-types .user-content .row
+{
+  padding-top: 4%;
+  padding-left: 25%;
+  padding-right: 0%;
 }
 
 .user-content h2 {
   position: relative;
+  background-image: -webkit-linear-gradient(white,#adadad,rgba(255, 255, 255, 0.329));
+  border-bottom-left-radius : 100%;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 100%  ;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 30px;
-  padding-bottom: 20px;
-  margin-bottom: 40px;
+  padding-left: 350px;
+  padding-top: 20px;
+  padding-bottom: 2px ;
+  margin-bottom: 1px;
 }
 /* .user-content h2::after {
   content: "";
@@ -442,17 +462,27 @@ input:focus {
   background-color: rgb(117, 0, 133);
 } */
 .user-content .user-type-inner {
-  background-color: #fff;
-  border-radius: 16px;
-  padding: 50px 25px;
+
+  background-image: -webkit-linear-gradient(#d1edfa, rgba(148, 148, 148, 0.603),rgba(200, 224, 255, 0.863));
+  border-radius: 100px;
+  border-color: #ffffff;
+  padding: 40px 10px;
   text-align: center;
   transition: all 0.5s ease-in-out;
+  
+}
+
+.user-content .card-inner-text{
+ 
+  height: max-content;
 }
 .user-content .user-type-inner:hover {
-  background-color: #334756;
-  color: #fff !important;
+  background-color: #757474;  
+  cursor: pointer;
 }
-.card-inner-text{}
+
+
+
 
 /* .... */
 
