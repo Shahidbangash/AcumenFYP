@@ -24,15 +24,21 @@
  
   color: rgb(231, 231, 231);
   /*background-color: #023f6dec;*/
-  background-image: -webkit-linear-gradient(#000000ec ,#1e3652 ,#53b7fab4);
+  background-image: -webkit-linear-gradient(#b9b9b9 ,#696969b0 ,#353434be);
 }
 
 .main-header .main-logo{
   width: 30%;
-  font-size:1.6cm;
-  font-weight:bolder;
-  font-family :cursive ;
+  font-size:1.8cm;
+  padding-left: 3cm;
+  font-family:serif ;
+  color: #000;
+  float: left;
+  background: url(../img/favicon.png) no-repeat ;
+  background-size: 125px 125px;
 }
+
+
 .main-header .header-wrapper {
   display: flex;
   justify-content: space-between;
@@ -48,7 +54,7 @@
   font-size: 1.875em;
 }
 .main-logo:hover{
-  cursor: default ;
+  cursor:pointer ;
 }
 .main-header .header-wrapper .main-menu {
   text-align: end;
@@ -59,17 +65,20 @@
 }
 
 .main-header .header-wrapper .main-menu li .btn-outline-primary {
-  border-color: rgb(255, 255, 255);
-  background-color: #09b1ff3d;
-  border-width:1mm;
-  border-radius: 20%;
-  color: #ffffff;
+  border-color: transparent;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  color: #000000;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 0%;
 }
 
 .main-header .header-wrapper .main-menu li .btn-outline-primary:hover {
-  background-color: #fff5fd;
-  border-color: #000000;
-  color: #000000;
+  color: #000;
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .main-header .header-wrapper .main-menu li .login-button {

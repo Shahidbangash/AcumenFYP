@@ -5,9 +5,7 @@ body {
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  /* color: #777777; */
-  background: url(../img/images.jpg) no-repeat center; 
-  
+  background: url(../img/images.jpg) no-repeat center;
   /* background-color: #ddd !important; */
 }
 
@@ -24,7 +22,7 @@ h6 {
 
 h2{
   color: rgb(0, 0, 0);
-  background-color: #e0e0e0;
+  font-family:  'Open Sans', sans-serif;
 }
 
 .content {
@@ -362,7 +360,6 @@ input:focus {
   position: absolute;
   max-width: 70%;
   background-color: #fff;
-  border: 1px solid #c80000;
   border-radius: 2px;
   padding: 4px 25px 4px 10px;
   top: 50%;
@@ -426,12 +423,15 @@ input:focus {
 .user-types {
   align-content:center;
   align-self: center;
-  background-image: url("img\favicon.png");
 }
 
 .user-types .user-content {
 align-self:center;
   padding: 90px 40px;
+  transition: all 0.5s ease-in-out;
+  background-image: linear-gradient(rgba(255, 255, 255, 0),rgba(80, 80, 80, 0.527) ,rgba(0, 0, 0, 0.596));
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
   
 }
 
@@ -444,14 +444,15 @@ align-self:center;
 
 .user-content h2 {
   position: relative;
-  background-image: -webkit-linear-gradient(white,#adadad,rgba(255, 255, 255, 0.329));
+  background-color: transparent;
   border-bottom-left-radius : 100%;
   border-top-right-radius: 100%;
   border-top-left-radius: 100%;
   border-bottom-right-radius: 100%  ;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 30px;
-  padding-left: 350px;
+  font-weight: bolder;
+  font-family:  'Open Sans', sans-serif;
+  color:white;
+  padding-left: 30%;
   padding-top: 20px;
   padding-bottom: 2px ;
   margin-bottom: 1px;
@@ -467,10 +468,9 @@ align-self:center;
   background-color: rgb(117, 0, 133);
 } */
 .user-content .user-type-inner {
-
-  background-image: -webkit-linear-gradient(#d1edfa, rgba(148, 148, 148, 0.603),rgba(200, 224, 255, 0.863));
-  border-radius: 100px;
-  border-color: #ffffff;
+  color: rgb(255, 255, 255);
+  border-color: #000000;
+  border-radius: 20px;
   padding: 40px 10px;
   text-align: center;
   transition: all 0.5s ease-in-out;
@@ -478,11 +478,12 @@ align-self:center;
 }
 
 .user-content .card-inner-text{
- 
+  color: white;
   height: max-content;
 }
 .user-content .user-type-inner:hover {
-  background-color: #757474;  
+  border-color: #000000;
+  background-color: #00000050;
   cursor: pointer;
 }
 
