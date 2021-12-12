@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+ @-webkit-keyframes topAnimation {
+	 from {
+		 transform: translate(0rem,-10rem);
+	}
+	 to {
+		 transform: translate(0rem,10rem);
+	}
+}
+ @keyframes topAnimation {
+	 from {
+		 transform: translate(0rem,-10rem);
+	}
+	 to {
+		 transform: translate(0rem,10rem);
+	}
+}
+ @-webkit-keyframes bottomAnimation {
+	 from {
+		 transform: translate(-10rem,0);
+	}
+	 to {
+		 transform: translate(1rem,0);
+	}
+}
+ @keyframes bottomAnimation {
+	 from {
+		 transform: translate(-20rem,0);
+	}
+	 to {
+		 transform: translate(1rem,0);
+	}
+}
+ button.btx {
+	 border: 0;
+	 position:fixed ;
+	 letter-spacing: 1em;
+	 margin: 0 auto;
+	 padding: 1rem 3.5rem;
+	 background: transparent;
+	 transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55) 0.15s;
+}
+ button.btx::after, button.btx::before {
+	 border: 0;
+	 content: "";
+	 position: absolute;
+	 height: 40%;
+	 width: 10%;
+	 transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+	 z-index: -2;
+	 border-radius: 50%;
+}
+ button.btx::before {
+	 border: 0;
+	 background-color: #ffffff;
+	 top: -0.75rem;
+	 left: 0.5rem;
+	 -webkit-animation: topAnimation 2s cubic-bezier(0.68,-0.55,0.265,1.55) 0.25s infinite alternate;
+	 animation: topAnimation 2s cubic-bezier(0.68,-0.55,0.265,1.55) 0.25s infinite alternate;
+}
+ button.btx::after {
+	 background-color: #ffffff;
+	 top: 3rem;
+	 left: 13rem;
+	 -webkit-animation: bottomAnimation 2s cubic-bezier(0.68,-0.55,0.265,1.55) 0.5s infinite alternate;
+	 animation: bottomAnimation 2s cubic-bezier(0.68,-0.55,0.265,1.55) 0.5s infinite alternate;
+}
+ /*button.btx:hover {
+	 color: white;
+}
+ button.btx:hover::before, button.btx:hover::after {
+	 top: 0;
+	 height: 100%;
+	 width: 100%;
+	 border-radius: 0;
+	 -webkit-animation: none;
+	 animation: none;
+}
+ button.btx:hover::after {
+	 left: 0rem;
+}
+ button.btx:hover::before {
+	 top: 0.5rem;
+	 left: 0.35rem;
+}
+ */
