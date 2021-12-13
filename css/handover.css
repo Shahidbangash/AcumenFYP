@@ -53,23 +53,24 @@
 }
  button.btx::before {
 	 border: 0;
-	 background-color: #ffffff;
+	 background-color: #e4e4e4;
 	 top: -0.75rem;
 	 left: 0.5rem;
 	 -webkit-animation: topAnimation 2s cubic-bezier(0.68,-0.55,0.265,1.55) 0.25s infinite alternate;
 	 animation: topAnimation 2s cubic-bezier(0.68,-0.55,0.265,1.55) 0.25s infinite alternate;
+	 
 }
  button.btx::after {
-	 background-color: #ffffff;
+	 background-color: #e4e4e4;
 	 top: 3rem;
 	 left: 13rem;
 	 -webkit-animation: bottomAnimation 2s cubic-bezier(0.68,-0.55,0.265,1.55) 0.5s infinite alternate;
 	 animation: bottomAnimation 2s cubic-bezier(0.68,-0.55,0.265,1.55) 0.5s infinite alternate;
 }
- /*button.btx:hover {
-	 color: white;
+ button.btx:hover {
+	 cursor: default;
 }
- button.btx:hover::before, button.btx:hover::after {
+ /*button.btx:hover::before, button.btx:hover::after {
 	 top: 0;
 	 height: 100%;
 	 width: 100%;
