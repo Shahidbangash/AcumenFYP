@@ -1,0 +1,548 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+ body {
+	 background-color: #2F2F2F;
+	 color: #333;
+	 font-family: 'Lato';
+}
+ .container {
+	 padding: 50px 0;
+	 text-align: center;
+}
+ .chart {
+	 position: relative;
+	 display: inline-block;
+	 color: #999;
+	 font-size: 20px;
+	 text-align: center;
+	 padding: 0;
+	 margin: 0;
+	 width: 400px;
+	 height: 400px;
+}
+ #info1 {
+	 width: 500px;
+	 height: 500px;
+	 position: relative;
+	 margin: auto;
+	 margin-top: 100px;
+}
+ #info1.pessoa {
+	 width: 10%;
+}
+ #info1.pessoa img {
+	 width: 100%;
+}
+ .column-graph {
+	 width: 100%;
+	 max-width: 940px;
+	 margin: auto;
+	 position: relative;
+	 padding-top: 30px;
+}
+ .column-graph .esq {
+	 border: none;
+	 position: absolute;
+	 left: 40px;
+	 border-left: 2px solid #fff;
+	 height: calc(150%);
+	 width: 2px;
+	 top: 0;
+}
+ .column-graph .bot {
+	 border: none;
+	 position: absolute;
+	 left: 0px;
+	 bottom: -30px;
+	 border-bottom: 2px solid #fff;
+	 height: 2px;
+	 width: calc(100%);
+}
+ .column {
+	 height: 50px;
+	 margin-left: 42px;
+	 margin-top: 10px;
+	 position: relative;
+	 margin-bottom: 10px;
+	 font-family: arial;
+}
+ .gringo {
+	 background-color: #15bdff;
+}
+ .nac {
+	 background-color: #00ffaa;
+}
+ #angry {
+	 width: 1%;
+	 -webkit-animation: angry 2s;
+	 animation: angry 2s;
+	 animation-fill-mode: forwards;
+}
+ #angry:after {
+	 content: ' 10 ';
+	 position: absolute;
+	 right: -24px;
+	 color: #fff;
+	 top: 10px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ #angry:before {
+	 content: 'angry';
+	 position: absolute;
+	 left: -45px;
+	 color: #fff;
+	 top: 12px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: 0.5s;
+	 animation-fill-mode: forwards;
+}
+ #smilling {
+	 width: 5%;
+	 -webkit-animation: smilling 2s;
+	 animation: smilling 2s;
+	 animation-fill-mode: forwards;
+}
+ #smilling:after {
+	 content: ' 44 ';
+	 position: absolute;
+	 right: -24px;
+	 color: #fff;
+	 top: 10px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ #smilling:before {
+	 content: 'smilling';
+	 position: absolute;
+	 left: -65px;
+	 color: #fff;
+	 top: 12px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ #sad {
+	 width: 8%;
+	 -webkit-animation: sad 2s;
+	 animation: sad 2s;
+	 animation-fill-mode: forwards;
+}
+ #sad:after {
+	 content: ' 110 ';
+	 position: absolute;
+	 right: -30px;
+	 color: #fff;
+	 top: 10px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ #sad:before {
+	 content: 'sad';
+	 position: absolute;
+	 left: -80px;
+	 float: left;
+	 color: #fff;
+	 top: 12px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ #stressed {
+	 width: 50%;
+	 -webkit-animation: stressed 2s;
+	 animation: stressed 2s;
+	 animation-fill-mode: forwards;
+}
+ #stressed:after {
+	 content: ' 1243 ';
+	 position: absolute;
+	 right: 10px;
+	 color: #fff;
+	 top: 10px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ #stressed:before {
+	 content: 'stressed';
+	 position: absolute;
+	 left: -76px;
+	 float: left;
+	 color: #fff;
+	 top: 12px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ .nac {
+	 width: 85%;
+	 -webkit-animation: br 2s;
+	 animation: br 2s;
+	 animation-fill-mode: forwards;
+}
+ .nac:after {
+	 content: ' ';
+	 position: absolute;
+	 right: 10px;
+	 color: #000;
+	 top: 10px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ .nac:before {
+	 content: 'satisfied';
+	 position: absolute;
+	 left: -70px;
+	 float: left;
+	 color: #fff;
+	 top: 12px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ #happy {
+	 width: 95%;
+	 -webkit-animation: happy 2s;
+	 animation: happy 2s;
+	 animation-fill-mode: forwards;
+}
+ #happy:after {
+	 content: ' 2374 ';
+	 position: absolute;
+	 right: 10px;
+	 color: #fff;
+	 top: 10px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ #happy:before {
+	 content: 'happy';
+	 position: absolute;
+	 left: -67px;
+	 float: left;
+	 color: #fff;
+	 top: 12px;
+	 opacity: 0;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: .5s;
+	 animation-fill-mode: forwards;
+}
+ .chart img {
+	 position: absolute;
+	 max-width: 100px;
+	 max-height: 100px;
+	 background: white;
+}
+ .html {
+	 top: 50px;
+	 left: 45px;
+}
+ svg .inner {
+	 stroke: #256F8D;
+	 fill: none;
+	 stroke-width: 10;
+}
+ .html + svg .outer {
+	 stroke: #e34f26;
+}
+ .css + svg .outer {
+	 stroke: #0d84ce;
+}
+ .javascript {
+	 max-width: 90px;
+	 max-height: 90px;
+	 top: 45px;
+	 left: 45px;
+}
+ .javascript + svg .outer {
+	 stroke: #1dff74;
+}
+ .node {
+	 top: 45px;
+	 left: 45px;
+}
+ .node + svg .outer {
+	 stroke: #83cd29;
+}
+ .chart svg {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 z-index: 2;
+}
+ #circle:after {
+	 content: 'confused';
+	 position: absolute;
+	 opacity: 0;
+	 border-right: 3px solid #12ff6d;
+	 bottom: 25px;
+	 left: -40px;
+	 padding: 10px;
+	 padding-left: 30px;
+	 padding-right: 30px;
+	 padding-top: 50px;
+	 font-size: 20px;
+	 color: #fff;
+	 border-bottom: 3px solid #18f060;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: 1.5s;
+	 animation-fill-mode: forwards;
+}
+ #pizza:after {
+	 content: '5% stressed';
+	 position: absolute;
+	 opacity: 0;
+	 top: -113px;
+	 right: 52px;
+	 padding: 10px;
+	 padding-bottom: 0;
+	 padding-left: 30px;
+	 padding-right: 10px;
+	 padding-top: 50px;
+	 font-size: 49px;
+	 color: #fff;
+	 border-bottom: 3px solid #18f060;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: 1s;
+	 animation-fill-mode: forwards;
+}
+ #pizza:before {
+	 content: ' ';
+	 position: absolute;
+	 opacity: 0;
+	 top: -5px;
+	 right: 157px;
+	 height: 26px;
+	 border-right: 3px solid #18f079;
+	 -webkit-animation: see 2s;
+	 animation: see 2s;
+	 animation-delay: 1s;
+	 animation-fill-mode: forwards;
+}
+ .chart figcaption {
+	 width: calc(70%);
+	 height: calc(70%);
+	 border-radius: 100%;
+	 position: absolute;
+	 z-index: 1;
+	 left: calc(17%);
+	 top: calc(20%);
+	 -webkit-animation: see 1s;
+	 animation: see 1s;
+}
+ .chart figcaption h2 {
+	 font-family: arial;
+	 font-weight: lighter;
+	 font-size: 80px;
+	 color: #fff;
+	 margin-bottom: 1px;
+}
+ #pizza {
+	 top: 50px;
+}
+ #pizza figcaption h2 {
+	 font-family: arial;
+	 font-weight: lighter;
+	 font-size: 30px;
+	 color: #fff;
+	 margin-bottom: 10px;
+	 font-size: 50px;
+	 text-align: left;
+	 margin-top: 50px;
+	 padding-left: 50px;
+}
+ .chart figcaption p {
+	 color: #fff;
+	 max-width: 40%;
+	 margin: auto;
+	 font-size: 20px;
+}
+ .outer {
+	 fill: transparent;
+	 stroke: #18f04e;
+	 stroke-width: 25;
+	 stroke-dasharray: 251%;
+}
+ .pizza {
+	 stroke-dashoffset: -270%;
+	 stroke-width: 80%;
+}
+ .chart[data-percent='75'] .outer {
+	 stroke-dashoffset: -100%;
+	 -webkit-animation: show75 2s;
+	 animation: show75 2s;
+}
+ .chart[data-percent='pizza'] .outer {
+	 stroke-dashoffset: -262%;
+	 -webkit-animation: pizza 1s;
+	 animation: pizza 1s;
+}
+ @-webkit-keyframes show75 {
+	 from {
+		 stroke-dashoffset: -251%;
+	}
+	 to {
+		 stroke-dashoffset: -100%;
+	}
+}
+ @keyframes show75 {
+	 from {
+		 stroke-dashoffset: -251%;
+	}
+	 to {
+		 stroke-dashoffset: -100%;
+	}
+}
+ @-webkit-keyframes smiling {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 95%;
+	}
+}
+ @keyframes smiling {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 95%;
+	}
+}
+ @-webkit-keyframes stressed {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 50%;
+	}
+}
+ @keyframes stressed {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 50%;
+	}
+}
+ @-webkit-keyframes br {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 85%;
+	}
+}
+ @keyframes br {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 85%;
+	}
+}
+ @-webkit-keyframes happy {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 8%;
+	}
+}
+ @keyframes happy {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 8%;
+	}
+}
+ @-webkit-keyframes angry {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 1%;
+	}
+}
+ @keyframes angry {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 1%;
+	}
+}
+ @-webkit-keyframes smilling {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 5%;
+	}
+}
+ @keyframes smilling {
+	 from {
+		 width: 0;
+	}
+	 to {
+		 width: 5%;
+	}
+}
+ @-webkit-keyframes pizza {
+	 from {
+		 stroke-dashoffset: -251%;
+	}
+	 to {
+		 stroke-dashoffset: -262%;
+	}
+}
+ @keyframes pizza {
+	 from {
+		 stroke-dashoffset: -251%;
+	}
+	 to {
+		 stroke-dashoffset: -262%;
+	}
+}
+ @keyframes see {
+	 from {
+		 opacity: 0;
+	}
+	 to {
+		 opacity: 1;
+	}
+}
+ 
