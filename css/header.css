@@ -18,12 +18,28 @@
   background: #f38181;
 }
 .main-header {
-  top: 0;
   width: 100%;
-  font-family: Montserrat, sans-serif;
-  color: #ddd;
-  background-color: #334756;
+  font-family: 'Courier New', Courier, monospace;
+  border-bottom-left-radius: 40%;
+ 
+  color: rgb(231, 231, 231);
+  /*background-color: #023f6dec;*/
+  background-image: -webkit-linear-gradient(#b9b9b9 ,#696969b0 ,#353434be);
 }
+
+.main-header .main-logo{
+  width: 30%;
+  font-size:1.8cm;
+  padding-left: 3cm;
+  font-family:serif ;
+  color: #000;
+  float: left;
+  background: url(../img/favicon.png) no-repeat ;
+  animation: rot 5s ease-in-out backwards;
+  background-size: 125px 125px;
+}
+
+
 .main-header .header-wrapper {
   display: flex;
   justify-content: space-between;
@@ -38,8 +54,14 @@
   font-weight: 700;
   font-size: 1.875em;
 }
+
+@keyframes rot {
+  100% { transform: rotateY(.5turn); }
+  100% { transform: rotateY(1turn); }
+}
+
 .main-logo:hover{
-  cursor: pointer;
+  cursor:pointer ;
 }
 .main-header .header-wrapper .main-menu {
   text-align: end;
@@ -50,35 +72,28 @@
 }
 
 .main-header .header-wrapper .main-menu li .btn-outline-primary {
-  border-color: #fff;
-  color: #fff5fd;
+  border-color: transparent;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  color: #000000;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 0%;
 }
 
 .main-header .header-wrapper .main-menu li .btn-outline-primary:hover {
-  background-color: #fff5fd;
-  color: #022e57;
+  color: #000;
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 
-.main-header .header-wrapper .main-menu li .login-button {
+/*.main-header .header-wrapper .main-menu li .login-button {*/
   /* background-color: #0a1931; */
   /* border-color: #242424; */
   /* background-color: #B2B1B9; */
-}
-.main-header .header-wrapper .main-menu li a {
-  padding-bottom: 0.75em;
-  text-transform: uppercase;
-  color: rgb(255, 255, 255);
-  font-size: 0.875em;
-  text-decoration: none;
-}
-.main-header .header-wrapper .main-menu li a:hover {
-  color: #524c38;
-  border-bottom: 0.1875em solid #fce38a;
-  transition: 0.1s;
-}
-.main-header .header-wrapper .main-menu li a span {
-  font-size: 1.2em;
-}
+/*}*/
+
 /* .main-header .header-wrapper .main-menu li:last-child {
   padding: 0.75em 0;
 } */

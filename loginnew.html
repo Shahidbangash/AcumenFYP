@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Acumen</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/loginnew.css"> 
+    <script defer type="text/javascript" src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	
+	
+  
+</head>
+<body>
+
+    <header class="main-header">
+    </header>
+
+
+<section class="user-authentication">
+    <div class="user_options-container">
+      <div class="user_options-text">
+        <div class="user_options-unregistered">
+          <h2 class="user_unregistered-title">Don't have an account?</h2>
+           <button class="user_unregistered-signup" id="signup-button">Sign up</button>
+        </div>
+  
+        <div class="user_options-registered">
+          <h2 class="user_registered-title">Have an account?</h2>
+           <button class="user_registered-login" id="login-button">Login</button>
+        </div>
+      </div>
+      
+      <div class="user_options-forms" id="user_options-forms">
+        <div class="user_forms-login">
+          <h2 class="forms_title">Login</h2>
+          <form class="forms_form">
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+                <input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+              </div>
+              <div class="forms_field">
+                <input type="password" placeholder="Password" class="forms_field-input" required />
+              </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <button type="button" class="forms_buttons-forgot" id="forget-button">Forgot password?</button>
+              <button type="submit" class="forms_buttons-action">Login</button>
+                          <a class="forms_buttons-mb-button" id="signup-button-mb">Sign up</a>
+            </div>
+          </form>
+        </div>
+        <div class="user_forms-signup">
+          <h2 class="forms_title">Sign Up</h2>
+          <form class="forms_form">
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+                <input type="text" placeholder="Full Name" class="forms_field-input" required />
+              </div>
+              <div class="forms_field">
+                <input type="email" placeholder="Email" class="forms_field-input" required />
+              </div>
+              <div class="forms_field">
+                <input type="password" placeholder="Password" class="forms_field-input" required />
+              </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <button type="submit" class="forms_buttons-action">Sign up</button>
+                          <a class="forms_buttons-mb-button" id="login-button-mb">Login</a>
+            </div>
+          </form>
+        </div>
+              <div class="user_forms-forgot">
+          <h2 class="forms_title">Forgot Password</h2>
+          <form class="forms_form">
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+                <input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+              </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <button type="submit" class="forms_buttons-action">Send reset link</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/loginnew.js"></script>
+</body>
+  </html>
