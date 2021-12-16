@@ -27,16 +27,20 @@
 	<link rel="stylesheet" href="./css/handover.css">
 	<link rel="stylesheet" href="./css/report.css">
 	<script src="./js/authentication.js"></script>
-	
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+
 </head>
 
 <body style="min-height: 100vh;">
 	<header class="main-header">
 	</header>
 
-	<p><span onclick="location.href ='report.html';" title="report">Report</span>
+	<div class="cotainer">
+		<div id="user_history"></div>
+	</div>
 
-		<script src="js/togglePlayer.js"></script>
+	<script src="js/togglePlayer.js"></script>
 	<!-- update the version number as needed -->
 	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
 	<!-- include only the Firebase features as you need -->
@@ -47,6 +51,7 @@
 	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-messaging-compat.js"></script>
 	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-storage-compat.js"></script>
 	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics-compat.js"></script>
+	<script src="./js/history.js"></script>
 </body>
 
 </html>

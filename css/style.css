@@ -3,9 +3,11 @@
 body {
   line-height: 26px;
   font-size: 15px;
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  background: url(../img/images.jpg) no-repeat center;
+  background: url(../img/images.jpg) no-repeat content-box ;
+  object-fit: cover;
   /* background-color: #ddd !important; */
 }
 

@@ -23,20 +23,30 @@
     <link rel="stylesheet" href="./css/footer.css">
     <script src="/js/videoResult.js"></script>
     <script src="/js/togglePlayer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.esm.js" integrity="sha512-l7r77O5BcEK/7O7RdDsjzvcr5vWoXIZUfGFg+Ux5sbZDyAaLvK1AkJS0svnZtK+ns0ZL4B1NW1/Ym/r2D8ajBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.esm.min.js" integrity="sha512-An8dB8BaoOLn5c8Z4MMGTcynffQQPF83od04ilnUjZFFp8cwCM7xMpz5H1MbdKRGuX05iRiy9mjTqhF5Ycb5gQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.js" integrity="sha512-7Fh4YXugCSzbfLXgGvD/4mUJQty68IFFwB65VQwdAf1vnJSG02RjjSCslDPK0TnGRthFI8/bSecJl6vlUHklaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/helpers.esm.js" integrity="sha512-D4/TLV2ZsKkp3TEC0YLHfL0cxxLEJRCNkjS81VuswBQD5hDXGcwRAcpI8CXiMMqBbrIyMJjvUuEswEI0STzV6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/helpers.esm.min.js" integrity="sha512-Tr7rEJNzZS8JWzmaQbTL/99DQDgnsklnYBH+mXNvbngHVHPP0hhb2cjWLbFjyKTqE8QZXmEtgC1WDPKZwcrYEw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
 </head>
 
 <body onload="readyFunction();">
     <header class="main-header">
 
     </header>
-
     <div class="container content">
         <div class=" text-center button-row">
             <div class="btn btn-outline-primary p-1 button-width">
+                <div class="container"><button class="btx" href="#"></button></div>
                 <!-- <label for="input">Local Video:</label> -->
                 <input class="" type="file" id="input" name="input_video" accept="video/mp4, video/mov">
             </div>
-            <div><button type="button" class="btn btn-outline-primary p-2 button-width "
+            <div>
+                <button type="button" class="btn btn-outline-primary p-2 button-width "
                     onclick="location.href ='report.html';">Generate report</button>
             </div>
         </div>
