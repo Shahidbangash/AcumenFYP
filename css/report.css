@@ -4,10 +4,10 @@
 	 color: #333;
 	 font-family: 'Lato';
 }
- .container {
+ /* .container {
 	 padding: 50px 0;
 	 text-align: center;
-}
+} */
  .chart {
 	 position: relative;
 	 display: inline-block;

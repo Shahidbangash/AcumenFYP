@@ -1,29 +1,30 @@
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/login.css">
-        <!-- <link rel="stylesheet" href="./css/header.css"> -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-            rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <title>Login</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-		<script defer type="text/javascript" src="js/script.js"></script>
-		<link rel="stylesheet" href="./css/footer.css">
-		<link rel="stylesheet" href="./css/header.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <!-- <link rel="stylesheet" href="./css/header.css"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Login</title>
 
-    </head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
 
-    <body>
-        <header class="main-header">
-        </header>
+</head>
 
-        <!-- <div class="svg-top">
+<body>
+    <header class="main-header">
+    </header>
+
+    <!-- <div class="svg-top">
             <?xml version="1.0" encoding="utf-8"?>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 height="1337" width="1337">
@@ -58,93 +59,88 @@
             </svg>
         </div>-->
 
-        <section class="container">
-            <section class="wrapper" id="login-section">
-                <div>
-                    <h1>Welcome</h1>
-                    <p>User Login</p>
-                </div>
-                <section class="main-content" id="login-section">
-                    <form id="login_form" onsubmit="event.preventDefault(); login();">
-                        <input required autocomplete="email" type="email" name="email" placeholder="Email">
-                        <div class="line"></div>
-                        <input autocomplete="current-password" type="password" name="password" placeholder="Password">
-                        <!-- <div class="line"></div> -->
-                        <button type="submit" class="btn custom-button w-100">Login</button>
-                        <p class="text-danger" id="login_response"></p>
-                    </form>
-                </section>
-                <div class="login-footer">
-                    <p><span onclick="location.href ='loginnew.html';" title="Register">Forgot Password?</span></p>
-                    <p><span onclick="location.href ='signup.html';" title="Register">Register</span>
-                    </p>
-                </div>
+    <section class="container">
+        <section class="wrapper" id="login-section">
+            <div>
+                <h1>Welcome</h1>
+                <p>User Login</p>
+            </div>
+            <section class="main-content" id="login-section">
+                <form id="login_form" onsubmit="event.preventDefault(); login();">
+                    <input required autocomplete="email" type="email" name="email" placeholder="Email">
+                    <div class="line"></div>
+                    <input autocomplete="current-password" type="password" name="password" placeholder="Password">
+                    <!-- <div class="line"></div> -->
+                    <button type="submit" class="btn custom-button w-100">Login</button>
+                    <p class="text-danger" id="login_response"></p>
+                </form>
             </section>
-
+            <div class="login-footer">
+                <p><span onclick="location.href ='resetPassword.html';" title="Register">Forgot Password?</span></p>
+                <p><span onclick="location.href ='signup.html';" title="Register">Register</span>
+                </p>
+            </div>
         </section>
+    </section>
+
+    <div class="container d-flex flex-column justify-content-center" style="height: 100vh;">
+    </div>
 
 
 
-        <div class="container d-flex flex-column justify-content-center" style="height: 100vh;">
-        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <!-- update the version number as needed -->
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-functions-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-messaging-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-storage-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics-compat.js"></script>
+    <script type="module">
 
+        document.addEventListener('DOMContentLoaded', function () {
+            try {
+                const firebaseConfig = {
+                    apiKey: "AIzaSyC1GkiWGio-_MohFCjXEZxr2akg286nKWA",
+                    authDomain: "acumenfyp.firebaseapp.com",
+                    projectId: "acumenfyp",
+                    storageBucket: "acumenfyp.appspot.com",
+                    messagingSenderId: "982412180494",
+                    appId: "1:982412180494:web:eca5e3ea3ef3819abad05f",
+                    measurementId: "G-25G6CNZT8L"
+                };
 
+                // Initialize Firebase
+                const app = firebase.initializeApp(firebaseConfig);
+                //const analytics = firebase.getAnalytics(app);
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-            crossorigin="anonymous"></script>
-        <!-- update the version number as needed -->
-        <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
-        <!-- include only the Firebase features as you need -->
-        <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth-compat.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database-compat.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-functions-compat.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-messaging-compat.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-storage-compat.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics-compat.js"></script>
-        <script type="module">
+                //let app = firebase.app();
+                let features = [
+                    'auth',
+                    'database',
+                    'firestore',
+                    'functions',
+                    'messaging',
+                    'storage',
+                    'analytics',
+                    'remoteConfig',
+                    'performance',
+                ].filter(feature => typeof app[feature] === 'function');
+                //loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+            } catch (e) {
+                console.error(e);
+            }
+        });
+    </script>
 
-            document.addEventListener('DOMContentLoaded', function () {
-                try {
+    <script src="js/authentication.js"></script>
+    <!-- //<script src="./js/script.js"></script> -->
 
-
-                    const firebaseConfig = {
-                        apiKey: "AIzaSyC1GkiWGio-_MohFCjXEZxr2akg286nKWA",
-                        authDomain: "acumenfyp.firebaseapp.com",
-                        projectId: "acumenfyp",
-                        storageBucket: "acumenfyp.appspot.com",
-                        messagingSenderId: "982412180494",
-                        appId: "1:982412180494:web:eca5e3ea3ef3819abad05f",
-                        measurementId: "G-25G6CNZT8L"
-                    };
-
-                    // Initialize Firebase
-                    const app = firebase.initializeApp(firebaseConfig);
-                    //const analytics = firebase.getAnalytics(app);
-
-                    //let app = firebase.app();
-                    let features = [
-                        'auth',
-                        'database',
-                        'firestore',
-                        'functions',
-                        'messaging',
-                        'storage',
-                        'analytics',
-                        'remoteConfig',
-                        'performance',
-                    ].filter(feature => typeof app[feature] === 'function');
-                    //loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-                } catch (e) {
-                    console.error(e);
-                }
-            });
-        </script>
-
-        <script src="js/authentication.js"></script>
-        <!-- //<script src="./js/script.js"></script> -->
-
-    </body>
+</body>
 
 </html>

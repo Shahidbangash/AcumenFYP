@@ -1,144 +1,106 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<link rel="icon" href="img/favicon.png" type="image/png">
-		<meta name="description"
-			content="A javascript based OPenCv library to detect face of person and expression of person using FaceAPi">
-		<title>Face Emotions detectors</title>
-		<link rel="stylesheet" href="./css/reset.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-		<script defer type="text/javascript" src="js/face-api.min.js"></script>
-		<script defer type="text/javascript" src="js/script.js"></script>
-		<link rel="stylesheet" href="./css/style.css">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-			crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<link rel="stylesheet" href="./css/header.css">
-		<link rel="stylesheet" href="./css/footer.css">
-		<link rel="stylesheet" href="./css/handover.css">
-	</head>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<meta name="description"
+		content="A javascript based OPenCv library to detect face of person and expression of person using FaceAPi">
+	<title>Face Emotions detectors</title>
 
-	<body>
-		<header class="main-header">
-		</header>
+	<link rel="stylesheet" href="./css/reset.css">
+	<script type="script" src="/js/firebaseInit.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<script defer type="text/javascript" src="js/face-api.min.js"></script>
+	<script defer type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/footer.css">
+	<link rel="stylesheet" href="./css/handover.css">
+	<script src="./js/authentication.js"></script>
 
-		<section class="intro-section">
-			<div class="container">
-				<div class="row">
-					<div class=" col-12">
-						<h3 class="text-center p-2 main-heading">Intro</h3>
-						<p class="main-paragraph p-2">ACUMEN is a project that is designed to bring honest and unforgeble results of human emotions
-							and presepective using their facial expressions and gestures</p>
-					</div>
-					<!-- <div class="col-lg-6 col-12">
+</head>
+
+<body style="min-height: 100vh;">
+	<header class="main-header">
+	</header>
+
+	<section class="intro-section">
+		<div class="container">
+			<div class="row">
+				<div class=" col-12 user-content">
+					<h3 class="text-center p-2 ">Intro</h3>
+					<p class="main-paragraph p-2">ACUMEN is a project that is designed to bring honest and unforgeble
+						results of human emotions
+						and presepective using their facial expressions and gestures</p>
+				</div>
+				<!-- <div class="col-lg-6 col-12">
 						<div style="height: wh-30;">
 
 							<img class="img-fluid" src="./img/intro-image.jpeg" alt="" srcset="">
 						</div>
 					</div> -->
-				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
+	<section class="user-types">
+		<div class="container-fluid">
+			<div class="user-content container">
+				<h2 class=""> Get your Expression done in one Click!!!</h2>
+				<div class="container"><button class="btx" href="#"></button></div>
 
-
-
-
-		<section class="user-types">
-
-			<div class="container-fluid">
-				<div class="user-content ">
-					<h2> Get your Expression done in one Click!!!</h2>
-					<div class="container"><button class="btx" href="#"></button></div>
-
-					<div class="row ">
-						<div class="col-4" onclick="onclick=location.href = './cameraResult.html';">
-							<div class="user-type-inner">
-								<div class="user-image">
-									<i class="fa fa-camera icon-style " aria-hidden="true"></i>
-									<!-- <img src="images/user-type1.JPG" alt=""> -->
-								</div>
-								<h4 class="card-inner-text"> Use WebCam</h4>
+				<div class="row ">
+					<div class="col-4" onclick="onclick=location.href = './cameraResult.html';">
+						<div class="user-type-inner">
+							<div class="user-image">
+								<i class="fa fa-camera icon-style " aria-hidden="true"></i>
+								<!-- <img src="images/user-type1.JPG" alt=""> -->
 							</div>
+							<h4 class="card-inner-text"> Use WebCam</h4>
 						</div>
-						<div class="col-4" onclick="location.href = './videoResult.html'">
-							<div class="user-type-inner">
-								<div class="user-image">
-									<i class="fa fa-video-camera icon-style " style="font-size: 50px;"
-										aria-hidden="true"></i>
-									<!-- <img src="images/user-type1.JPG" alt=""> -->
-								</div>
-								<h4 class="card-inner-text">Use Local Video</h4>
+					</div>
+					<div class="col-4" onclick="location.href = './videoResult.html'">
+						<div class="user-type-inner">
+							<div class="user-image">
+								<i class="fa fa-video-camera icon-style " style="font-size: 50px;"
+									aria-hidden="true"></i>
+								<!-- <img src="images/user-type1.JPG" alt=""> -->
 							</div>
+							<h4 class="card-inner-text">Use Local Video</h4>
 						</div>
-
 					</div>
 
 				</div>
+
 			</div>
-		</section>
+		</div>
+	</section>
 
 
 
-		<!-- <footer></footer> -->
+	<!-- <footer></footer> -->
 
-		<script src="js/togglePlayer.js"></script>
-		<!-- update the version number as needed -->
-		<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
-		<!-- include only the Firebase features as you need -->
-		<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth-compat.js"></script>
-		<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database-compat.js"></script>
-		<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
-		<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-functions-compat.js"></script>
-		<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-messaging-compat.js"></script>
-		<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-storage-compat.js"></script>
-		<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics-compat.js"></script>
+	<script src="js/togglePlayer.js"></script>
+	<!-- update the version number as needed -->
+	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+	<!-- include only the Firebase features as you need -->
+	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth-compat.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database-compat.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-functions-compat.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-messaging-compat.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-storage-compat.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics-compat.js"></script>
 
-		<script type="module">
-
-			document.addEventListener('DOMContentLoaded', function () {
-				try {
-
-					const firebaseConfig = {
-						apiKey: "AIzaSyC1GkiWGio-_MohFCjXEZxr2akg286nKWA",
-						authDomain: "acumenfyp.firebaseapp.com",
-						projectId: "acumenfyp",
-						storageBucket: "acumenfyp.appspot.com",
-						messagingSenderId: "982412180494",
-						appId: "1:982412180494:web:eca5e3ea3ef3819abad05f",
-						measurementId: "G-25G6CNZT8L"
-					};
-
-					// Initialize Firebase
-					const app = firebase.initializeApp(firebaseConfig);
-					//const analytics = firebase.getAnalytics(app);
-
-					//let app = firebase.app();
-					let features = [
-						'auth',
-						'database',
-						'firestore',
-						'functions',
-						'messaging',
-						'storage',
-						'analytics',
-						'remoteConfig',
-						'performance',
-					].filter(feature => typeof app[feature] === 'function');
-					//loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-				} catch (e) {
-					console.error(e);
-				}
-			});
-		</script>
-
-	</body>
+</body>
 
 </html>

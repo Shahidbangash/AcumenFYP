@@ -1,5 +1,37 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+  <meta charset="utf-8">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<meta name="description"
+		content="A javascript based OPenCv library to detect face of person and expression of person using FaceAPi">
+	<title>Face Emotions detectors</title>
+
+	<link rel="stylesheet" href="./css/reset.css">
+	<script type="script" src="/js/firebaseInit.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<script defer type="text/javascript" src="js/face-api.min.js"></script>
+	<script defer type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/footer.css">
+	<link rel="stylesheet" href="./css/handover.css">
+	<link rel="stylesheet" href="./css/report.css">
+  <script src="./js/report.js"></script>
+  <script src="./js/authentication.js"></script>
+
+</head>
+
+<!-- 
 <head>
     <meta charset="utf-8">
 		<link rel="icon" href="img/favicon.png" type="image/png">
@@ -22,88 +54,97 @@
 		<link rel="stylesheet" href="./css/footer.css">
         <link rel="stylesheet" href="./css/report.css">
         <script> href ='./js/report.js' </script>
-      
-
-
-   
-</head>
+         
+</head> -->
 
 <body>
-    <header class="main-header">
-    </header>
+  <header class="main-header">
+  </header>
 
 
-  
-<html >
-    <head>
+
+  <html>
+  <!-- <head>
       <meta charset="UTF-8">
       <title>Graphs</title>
-    </head>
-  
-    <body>
-      <section class="container">
-    
-  
-        <!-- START - CIRCLE GRAPH -->
-        <div>
-          <figure class="chart" id="circle"data-percent="75">
-            <svg>
-              <circle  class="inner"cx="1.5%" cy="52%" r="40%" transform="rotate(-90, 95, 95)"/>
-              <circle class="outer" cx="1.5%" cy="52%" r="40%" transform="rotate(-90, 95, 95)"/>
-            </svg>
-  
-            <figcaption>
-              <h2>74%</h2>
-              <p>Emotions</p>
-            </figcaption>
-          </figure>
-       
-          <figure class="chart" id="pizza"data-percent="pizza" >
-            <svg>
-              <defs>
-                <circle id="SVGID_1_" cx="1.5%" cy="52%" r="43%" stroke="#f0f" />
-              </defs>
-  
-              <clipPath id="SVGID_2_">
-                <use xlink:href="#SVGID_1_" overflow="visible"/>
-              </clipPath>
-              
-              <circle  class="inner"cx="1.5%" cy="52%" r="40%" transform="rotate(-90, 95, 95)"/>
-              <circle clip-path="url(#SVGID_2_)" class="outer pizza" cx="1.5%" cy="52%" r="40%" transform="rotate(-90, 95, 95)"/>
-            </svg>
-  
-            <figcaption>
-              <h2>95%</h2>
-              <p>behavior</p>
-            </figcaption>
-          </figure>
-        </div>
-        <!-- END - CIRCLE GRAPH -->
-  
-        <!-- START - COLUMN GRAPH -->
-        <div class="column-graph">
-          <hr class="esq">
-          <hr class="bot">
-          <div class="column gringo" id="smiling"></div>
-          <div class="column gringo" id="happy"></div>
-          <div class="column gringo" id="sad"></div>
-          <div class="column gringo" id="stressed"></div>
-          <div class="column nac"></div>
-          <div class="column gringo" id="angry"></div>
-        </div>
-        <!-- END - COLUMN GRAPH -->
-  
-  
-  
-  
-  
-  
-  
-      </section>
-  
-    </body>
+    </head> -->
+
+  <body>
+    <section class="intro-section">
+    <div class="container" >
+      <!-- START - CIRCLE GRAPH -->
+      <div  class="pt-5 pb-5 text-center">
+        <figure class="chart" id="circle" data-percent="75">
+          <svg>
+            <circle class="inner" cx="1.5%" cy="52%" r="40%" transform="rotate(-90, 95, 95)" />
+            <circle class="outer" cx="1.5%" cy="52%" r="40%" transform="rotate(-90, 95, 95)" />
+          </svg>
+
+          <figcaption>
+            <h2>74%</h2>
+            <p>Emotions</p>
+          </figcaption>
+        </figure>
+
+        <figure class="chart" id="pizza" data-percent="pizza">
+          <svg>
+            <defs>
+              <circle id="SVGID_1_" cx="1.5%" cy="52%" r="43%" stroke="#f0f" />
+            </defs>
+
+            <clipPath id="SVGID_2_">
+              <use xlink:href="#SVGID_1_" overflow="visible" />
+            </clipPath>
+
+            <circle class="inner" cx="1.5%" cy="52%" r="40%" transform="rotate(-90, 95, 95)" />
+            <circle clip-path="url(#SVGID_2_)" class="outer pizza" cx="1.5%" cy="52%" r="40%"
+              transform="rotate(-90, 95, 95)" />
+          </svg>
+
+          <figcaption>
+            <h2>95%</h2>
+            <p>behavior</p>
+          </figcaption>
+        </figure>
+      </div>
+      <!-- END - CIRCLE GRAPH -->
+
+      <!-- START - COLUMN GRAPH -->
+      <div class="column-graph">
+        <hr class="esq">
+        <hr class="bot">
+        <div class="column gringo" id="smiling"></div>
+        <div class="column gringo" id="happy"></div>
+        <div class="column gringo" id="sad"></div>
+        <div class="column gringo" id="stressed"></div>
+        <div class="column nac"></div>
+        <div class="column gringo" id="angry"></div>
+      </div>
+      <!-- END - COLUMN GRAPH -->
+    </div>
+    </section>
+
+
+    <!-- <footer></footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"></script>
+    <!-- update the version number as needed -->
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-functions-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-messaging-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-storage-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics-compat.js"></script>
+
+  </body>
+
   </html>
-  
+
 </body>
- 
+
 </html>

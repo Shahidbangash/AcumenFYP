@@ -1,6 +1,53 @@
 var video;
 $(document).ready(function () {
-  $(".main-header").load("./header.html");
+
+  try {
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC1GkiWGio-_MohFCjXEZxr2akg286nKWA",
+      authDomain: "acumenfyp.firebaseapp.com",
+      projectId: "acumenfyp",
+      storageBucket: "acumenfyp.appspot.com",
+      messagingSenderId: "982412180494",
+      appId: "1:982412180494:web:eca5e3ea3ef3819abad05f",
+      measurementId: "G-25G6CNZT8L"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    //const analytics = firebase.getAnalytics(app);
+
+    //let app = firebase.app();
+    let features = [
+      'auth',
+      'database',
+      'firestore',
+      'functions',
+      'messaging',
+      'storage',
+      'analytics',
+      'remoteConfig',
+      'performance',
+    ].filter(feature => typeof app[feature] === 'function');
+    //loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+  } catch (e) {
+    console.log(e);
+  }
+
+  // var user = firebase.auth().currentUser;
+
+  firebase.auth().onAuthStateChanged(function (user) { //or use 
+  if (user) {
+    console.log(`User is login ${user.displayName}`);
+    $(".main-header").load("./loginHeader.html");
+    // User is signed in.
+  } else {
+    console.log(`User is not login `);
+    // No user is signed in.
+    $(".main-header").load("./header.html");
+  }
+  });
+  // $(".main-header").load("./header.html");
   $("footer").load("./footer.html");
   // loadModels();
 });
