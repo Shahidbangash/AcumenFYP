@@ -23,15 +23,27 @@
     <link rel="stylesheet" href="./css/footer.css">
     <script src="/js/videoResult.js"></script>
     <script src="/js/togglePlayer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.esm.js" integrity="sha512-l7r77O5BcEK/7O7RdDsjzvcr5vWoXIZUfGFg+Ux5sbZDyAaLvK1AkJS0svnZtK+ns0ZL4B1NW1/Ym/r2D8ajBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.esm.min.js" integrity="sha512-An8dB8BaoOLn5c8Z4MMGTcynffQQPF83od04ilnUjZFFp8cwCM7xMpz5H1MbdKRGuX05iRiy9mjTqhF5Ycb5gQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.js" integrity="sha512-7Fh4YXugCSzbfLXgGvD/4mUJQty68IFFwB65VQwdAf1vnJSG02RjjSCslDPK0TnGRthFI8/bSecJl6vlUHklaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/helpers.esm.js" integrity="sha512-D4/TLV2ZsKkp3TEC0YLHfL0cxxLEJRCNkjS81VuswBQD5hDXGcwRAcpI8CXiMMqBbrIyMJjvUuEswEI0STzV6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/helpers.esm.min.js" integrity="sha512-Tr7rEJNzZS8JWzmaQbTL/99DQDgnsklnYBH+mXNvbngHVHPP0hhb2cjWLbFjyKTqE8QZXmEtgC1WDPKZwcrYEw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"
+        integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.esm.js"
+        integrity="sha512-l7r77O5BcEK/7O7RdDsjzvcr5vWoXIZUfGFg+Ux5sbZDyAaLvK1AkJS0svnZtK+ns0ZL4B1NW1/Ym/r2D8ajBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.esm.min.js"
+        integrity="sha512-An8dB8BaoOLn5c8Z4MMGTcynffQQPF83od04ilnUjZFFp8cwCM7xMpz5H1MbdKRGuX05iRiy9mjTqhF5Ycb5gQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.js"
+        integrity="sha512-7Fh4YXugCSzbfLXgGvD/4mUJQty68IFFwB65VQwdAf1vnJSG02RjjSCslDPK0TnGRthFI8/bSecJl6vlUHklaw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/helpers.esm.js"
+        integrity="sha512-D4/TLV2ZsKkp3TEC0YLHfL0cxxLEJRCNkjS81VuswBQD5hDXGcwRAcpI8CXiMMqBbrIyMJjvUuEswEI0STzV6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/helpers.esm.min.js"
+        integrity="sha512-Tr7rEJNzZS8JWzmaQbTL/99DQDgnsklnYBH+mXNvbngHVHPP0hhb2cjWLbFjyKTqE8QZXmEtgC1WDPKZwcrYEw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+    <!-- <script src="./js/CameraResult.js"></script> -->
 </head>
 
 <body onload="readyFunction();">
@@ -45,18 +57,61 @@
                 <!-- <label for="input">Local Video:</label> -->
                 <input class="" type="file" id="input" name="input_video" accept="video/mp4, video/mov">
             </div>
-            <div>
+            <!-- <div class="p-3">
+                <button type="button" class="btn btn-outline-primary p-2 button-width"
+                    onclick="generateReport()">Generate
+                    report</button>
+                <button type="button" class="btn btn-outline-primary p-2 button-width " onclick="saveHistory()">Save
+                    History</button>
                 <button type="button" class="btn btn-outline-primary p-2 button-width "
-                    onclick="location.href ='report.html';">Generate report</button>
-            </div>
+                    onclick="printDiv('report_chart')">Print Report</button>
+            </div> -->
         </div>
 
         <div class="pre-loader d-flex justify-content-center"></div>
-        <div id="video-result" class="text-center" style="display: none;">
-            <video id="video" autoplay="" muted="" sr=""></video>
+        <div id="video-result" class="text-center container " style="display: none;">
+            <video class="ml-auto mr-auto" id="video" autoplay="" muted="" sr=""></video>
         </div>
         <div id="localVideoResult" class="text-center" style="display: none;">
             <video controls="" src="" id="localVideo" style="display: none;"></video>
+        </div>
+
+        <div style="height: 50;"></div>
+
+        <div class="pb-5">
+            <canvas id="report_chart"></canvas>
+
+        </div>
+
+        <div class="container text-center">
+
+        </div>
+        <div style="height: 40px;">
+        </div>
+        <div class="pb-5" id="liveChart">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <div style="height: 40px;"></div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLongTitle">Response</h5>
+                        <button type="button" onclick="closeModal()" class="close btn" data-dismiss="myModal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modal_message"></p>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 

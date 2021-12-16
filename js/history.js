@@ -46,54 +46,58 @@ $(document).ready(function () {
             db.collection("history").where("userId", "==", user.uid)
                 .onSnapshot((querySnapshot) => {
                     querySnapshot.forEach((doc) => {
+                        var labels = [];
+                        var labelValues = [];
                         doc.data().data.forEach(element => {
-                            var labels = [];
-                            var labelValues = [];
-
                             labels.push(element['label']);
                             labelValues.push(element['confidence']);
-                            const data = {
-                                labels: labels,
-                                datasets: [
-                                    {
-                                        label: 'Dataset 1',
-                                        data: labelValues,
-                                        backgroundColor: [
-                                            '#000957',
-                                            '#FFCA03',
-                                            '#B85252',
-                                            '#105652',
-                                            '#F05454',
-                                            'rgba(153, 102, 255, .6)',
-                                            '#1A374D'
-                                        ],
-                                        // backgroundColor: Object.values(Utils.CHART_COLORS),
-                                    }
-                                ]
-                            };
-                            const config = {
-                                type: 'pie',
-                                data: data,
-                                options: {
-                                    responsive: true,
-                                    aspectRatio: 3,
-                                    plugins: {
-                                        legend: {
-                                            position: 'top',
-                                        },
-                                        title: {
-                                            display: true,
-                                            text: 'Expression and Behavior report'
-                                        }
-                                    }
-                                },
-                            };
-                            var canvasElement = document.createElement('canvas');
-                            domElement.appendChild(canvasElement);
-                            var myChart = new Chart(
-                                canvasElement, config
-                            );
+
                         });
+                        const data = {
+                            labels: labels,
+                            datasets: [
+                                {
+                                    label: 'Dataset 1',
+                                    data: labelValues,
+                                    backgroundColor: [
+                                        '#000957',
+                                        '#FFCA03',
+                                        '#B85252',
+                                        '#105652',
+                                        '#F05454',
+                                        'rgba(153, 102, 255, .6)',
+                                        '#1A374D'
+                                    ],
+                                    // backgroundColor: Object.values(Utils.CHART_COLORS),
+                                }
+                            ]
+                        };
+                        const config = {
+                            type: 'pie',
+                            data: data,
+                            options: {
+                                responsive: true,
+                                aspectRatio: 6,
+                                plugins: {
+                                    legend: {
+                                        position: 'top',
+                                    },
+                                    title: {
+                                        display: true,
+                                        text: 'Expression and Behavior report'
+                                    }
+                                }
+                            },
+                        };
+                        var canvasElement = document.createElement('canvas');
+                        var div = document.createElement("div");
+                        div.style.height = "400px";
+
+                        domElement.appendChild(canvasElement);
+                        domElement.appendChild(div);
+                        var myChart = new Chart(
+                            canvasElement, config
+                        );
                     });
                     // console.log(`User id is ${cities[0]}`);
 
