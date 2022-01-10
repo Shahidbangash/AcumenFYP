@@ -244,7 +244,7 @@ function generateReport() {
 
   const data = {
     labels: Object.keys(expressionObjectArray[0]),
-    datasets: [
+    datasets : [
       {
         label: 'Dataset 1',
         data: Object.values(finalResult),
@@ -271,7 +271,7 @@ function generateReport() {
       aspectRatio: 3,
       plugins: {
         legend: {
-          position: 'top',
+          position: 'bottom',
         },
         title: {
           display: true,
@@ -329,6 +329,7 @@ function saveHistory() {
           data.push({
             "confidence": finalResult[key],
             "label": ` ${key}`,
+
           });
 
         }
