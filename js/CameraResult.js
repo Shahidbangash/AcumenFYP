@@ -371,7 +371,7 @@ function saveHistory() {
 function closeModal() {
   let myModal = new bootstrap.Modal(document.getElementById('myModal'), {});
   // document.getElementById("modal_message").innerHTML = "Please Login to save your History";
-  myModal.hide();
+  myModal.closeModal;
 }
 
 

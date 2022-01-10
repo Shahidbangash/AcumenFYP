@@ -50,9 +50,13 @@
 /* .main-header .header-wrapper  */
 
 .main-logo {
-  text-align: start;
   font-weight: 700;
   font-size: 1.875em;
+  padding-top: 1%;
+  background: url(../img/favicon.png) no-repeat ;
+  background-size: contain;
+  background-position-x: center;
+  animation: rot 5s ease-in-out backwards;
 }
 
 @keyframes rot {
