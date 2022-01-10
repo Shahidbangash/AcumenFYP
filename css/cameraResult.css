@@ -1,9 +1,13 @@
-.container .btn{
-    background-color: rgb(61, 61, 61);
-    text-decoration-color: black;
+.container .p-2{
+    background-color: rgba(95, 95, 95, 0.459);
+    color: black;
+    border-color: black;
 
 }
 
-.container .btn :hover{
-    background-color: black;
+.container .p-2:hover{
+    background-color: rgb(3, 3, 105);
+    color: rgb(255, 255, 255);
+    
+
 }
