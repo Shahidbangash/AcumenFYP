@@ -24,6 +24,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link rel="stylesheet" href="./css/header.css">
 	<link rel="stylesheet" href="./css/footer.css">
+	<link rel="stylesheet" href="./css/cameraResult.css">
+	<link rel="stylesheet" href="./css/handover.css">
 	<script src="/js/CameraResult.js"></script>
 	<script src="/js/togglePlayer.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -32,24 +34,24 @@
 
 </head>
 
-<body onload="readyFunction();" style="background: none;">
-	<header class="main-header">
+<body onload="readyFunction();" style="background: rgba(0, 0, 0, 0.212);" >
+	<header class="main-header" >
 	</header>
 	<div class="container content">
 		<div class="pre-loader d-flex justify-content-center"></div>
 		<!-- <canvas id="customCanvas"></canvas> -->
-		<div id="video-result" class="text-center" style="display: none;">
+		<div id="video-result" class="text" style="display:contents;">
 
 			<video id="video" autoplay muted sr></video>
 
 		</div>
-		<div id="localVideoResult" class="text-center" style="display: none;">
-			<video controls src="" id="localVideo" style="display: none;"></video>
+		<div id="localVideoResult" class="text" style="display:contents ;">
+			<video controls src="" id="localVideo" style="display: contents;"></video>
 		</div>
 		<div id="afterCanvas">
 		</div>
-		<div class="text-center p-2">
-			<button type="button" class="btn btn-outline-primary p-2 button-width" onclick="generateReport()">Generate
+		<div class="text-center">
+			<button type="button" class="btn btn-outline-primary p-2 button-width " onclick="generateReport()">Generate
 				report</button>
 			<button type="button" class="btn btn-outline-primary p-2 button-width " onclick="saveHistory()">Save
 				History</button>

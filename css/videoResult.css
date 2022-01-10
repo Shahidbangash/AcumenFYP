@@ -1,0 +1,35 @@
+.container .btn {
+    background-color: transparent;
+    border: transparent;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .container .btx {
+    background-color: transparent;
+    border: transparent;
+    justify-content: center;
+    align-items: center;
+    text-emphasis-color: rgb(219, 0, 0);
+    text-decoration-color: aqua;
+
+  }
+ .container .btn :hover{
+      background-color: #1f1f1f;
+      cursor: pointer;
+      text-emphasis-color: rgb(255, 0, 0);
+      
+  }
+
+  .container .videoin{
+      width: 250px;
+background-color: #1f1f1f;
+  }
+
+  .container .text-center  {
+      width: fit-content;
+      border-radius: 1%;
+    background-color: #1f1f1f;
+  }
+  
